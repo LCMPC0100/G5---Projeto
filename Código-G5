@@ -76,20 +76,68 @@ void acenderLed(int ledNumero) {
       analogWrite(ledRGB1_R, 255);
       analogWrite(ledRGB1_G, 0);
       analogWrite(ledRGB1_B, 0);
+    // Cor do LED 2(Vermelho)
+      analogWrite(ledRGB2_R, 255);
+      analogWrite(ledRGB2_G, 0);
+      analogWrite(ledRGB2_B, 0);
+    // Cor do LED 3(Vermelho)
+      analogWrite(ledRGB3_R, 255);
+      analogWrite(ledRGB3_G, 0);
+      analogWrite(ledRGB3_B, 0);
+    // Cor do LED 4(Vermelho)
+      analogWrite(ledRGB4_R, 255);
+      analogWrite(ledRGB4_G, 0);
+      analogWrite(ledRGB4_B, 0);
       break;
     case 2:
-      // Cor do LED 2 (Verde)
+    // Cor do LED 1(Verde)
+      analogWrite(ledRGB1_R, 0);
+      analogWrite(ledRGB1_G, 255);
+      analogWrite(ledRGB1_B, 0);
+    // Cor do LED 2 (Verde)
       analogWrite(ledRGB2_R, 0);
       analogWrite(ledRGB2_G, 255);
       analogWrite(ledRGB2_B, 0);
+    // Cor do LED 3 (Verde)
+      analogWrite(ledRGB3_R, 0);
+      analogWrite(ledRGB3_G, 255);
+      analogWrite(ledRGB3_B, 0);
+    // Cor do LED 4 (Verde)
+      analogWrite(ledRGB4_R, 0);
+      analogWrite(ledRGB4_G, 255);
+      analogWrite(ledRGB4_B, 0);
       break;
     case 3:
-      // Cor do LED 3 (Azul)
+    // Cor do LED 1 (Azul)
+      analogWrite(ledRGB1_R, 0);
+      analogWrite(ledRGB1_G, 0);
+      analogWrite(ledRGB1_B, 255);
+	// Cor do LED 2 (Azul)
+      analogWrite(ledRGB2_R, 0);
+      analogWrite(ledRGB2_G, 0);
+      analogWrite(ledRGB2_B, 255);  
+    // Cor do LED 3 (Azul)
       analogWrite(ledRGB3_R, 0);
       analogWrite(ledRGB3_G, 0);
       analogWrite(ledRGB3_B, 255);
+    // Cor do LED 4 (Azul)
+      analogWrite(ledRGB4_R, 0);
+      analogWrite(ledRGB4_G, 0);
+      analogWrite(ledRGB4_B, 255);
       break;
     case 4:
+    // Cor do LED 1 (Amarelo)
+      analogWrite(ledRGB1_R, 255);
+      analogWrite(ledRGB1_G, 255);
+      analogWrite(ledRGB1_B, 0);
+    // Cor do LED 2 (Amarelo)
+      analogWrite(ledRGB2_R, 255);
+      analogWrite(ledRGB2_G, 255);
+      analogWrite(ledRGB2_B, 0);
+    // Cor do LED 3 (Amarelo)
+      analogWrite(ledRGB3_R, 255);
+      analogWrite(ledRGB3_G, 255);
+      analogWrite(ledRGB3_B, 0);
       // Cor do LED 4 (Amarelo)
       analogWrite(ledRGB4_R, 255);
       analogWrite(ledRGB4_G, 255);
