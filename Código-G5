@@ -11,9 +11,9 @@ const int ledRGB3_R = 13;  // vermelho
 const int ledRGB3_G = 12;  // verde 
 const int ledRGB3_B = 8;   // azul 
 
-const int ledRGB4_R = A0;
-const int ledRGB4_G = A1; 
-const int ledRGB4_B = A2;  
+const int ledRGB4_R = A0;  // vermelho
+const int ledRGB4_G = A1;  // verde
+const int ledRGB4_B = A2;  //azul
 
 // Definir os pinos dos botões
 const int button1Pin = 2; 
@@ -44,13 +44,10 @@ void setup() {
   pinMode(button2Pin, INPUT);
   pinMode(button3Pin, INPUT);
   pinMode(button4Pin, INPUT);
-
-  // Apagar todos os LEDs no início
-  apagarTodosOsLeds();
 }
 
 void loop() {
-  // Verificar se o botão 1 foi pressionado
+  // Verificando qual botão está sendo apertado
   if (digitalRead(button1Pin) == HIGH) {
     acenderLed(1);  // Acender LED 1
   } else if (digitalRead(button2Pin) == HIGH) {
@@ -62,86 +59,82 @@ void loop() {
   } else {
     apagarTodosOsLeds(); // Apagar todos os LEDs se nenhum botão estiver pressionado
   }
-
-  delay(10); // Pequeno atraso para estabilidade
 }
 
 // Função para acender o LED 
 void acenderLed(int ledNumero) {
-  apagarTodosOsLeds(); // Apagar todos os LEDs antes de acender o novo
-  
   switch (ledNumero) {
     case 1:
-      // Cor do LED 1 (Vermelho)
+      // Cor dos LEDS(Vermelho)
       analogWrite(ledRGB1_R, 255);
       analogWrite(ledRGB1_G, 0);
       analogWrite(ledRGB1_B, 0);
-    // Cor do LED 2(Vermelho)
+
       analogWrite(ledRGB2_R, 255);
       analogWrite(ledRGB2_G, 0);
       analogWrite(ledRGB2_B, 0);
-    // Cor do LED 3(Vermelho)
+
       analogWrite(ledRGB3_R, 255);
       analogWrite(ledRGB3_G, 0);
       analogWrite(ledRGB3_B, 0);
-    // Cor do LED 4(Vermelho)
+
       analogWrite(ledRGB4_R, 255);
       analogWrite(ledRGB4_G, 0);
       analogWrite(ledRGB4_B, 0);
       break;
     case 2:
-    // Cor do LED 1(Verde)
+    // Cor dos LEDS(Verde)
       analogWrite(ledRGB1_R, 0);
       analogWrite(ledRGB1_G, 255);
       analogWrite(ledRGB1_B, 0);
-    // Cor do LED 2 (Verde)
+
       analogWrite(ledRGB2_R, 0);
       analogWrite(ledRGB2_G, 255);
       analogWrite(ledRGB2_B, 0);
-    // Cor do LED 3 (Verde)
+
       analogWrite(ledRGB3_R, 0);
       analogWrite(ledRGB3_G, 255);
       analogWrite(ledRGB3_B, 0);
-    // Cor do LED 4 (Verde)
+
       analogWrite(ledRGB4_R, 0);
       analogWrite(ledRGB4_G, 255);
       analogWrite(ledRGB4_B, 0);
       break;
     case 3:
-    // Cor do LED 1 (Azul)
-      analogWrite(ledRGB1_R, 0);
-      analogWrite(ledRGB1_G, 0);
-      analogWrite(ledRGB1_B, 255);
-	// Cor do LED 2 (Azul)
-      analogWrite(ledRGB2_R, 0);
-      analogWrite(ledRGB2_G, 0);
-      analogWrite(ledRGB2_B, 255);  
-    // Cor do LED 3 (Azul)
-      analogWrite(ledRGB3_R, 0);
-      analogWrite(ledRGB3_G, 0);
-      analogWrite(ledRGB3_B, 255);
-    // Cor do LED 4 (Azul)
-      analogWrite(ledRGB4_R, 0);
-      analogWrite(ledRGB4_G, 0);
-      analogWrite(ledRGB4_B, 255);
-      break;
-    case 4:
-    // Cor do LED 1 (Amarelo)
+// Cor dos LEDS (Amarelo)
       analogWrite(ledRGB1_R, 255);
       analogWrite(ledRGB1_G, 255);
       analogWrite(ledRGB1_B, 0);
-    // Cor do LED 2 (Amarelo)
+
       analogWrite(ledRGB2_R, 255);
       analogWrite(ledRGB2_G, 255);
       analogWrite(ledRGB2_B, 0);
-    // Cor do LED 3 (Amarelo)
+
       analogWrite(ledRGB3_R, 255);
       analogWrite(ledRGB3_G, 255);
       analogWrite(ledRGB3_B, 0);
-      // Cor do LED 4 (Amarelo)
+
       analogWrite(ledRGB4_R, 255);
       analogWrite(ledRGB4_G, 255);
       analogWrite(ledRGB4_B, 0);
+      break;
+    case 4:
+    // Cor dos LEDS(Azul)
+      analogWrite(ledRGB1_R, 0);
+      analogWrite(ledRGB1_G, 0);
+      analogWrite(ledRGB1_B, 255);
+
+      analogWrite(ledRGB2_R, 0);
+      analogWrite(ledRGB2_G, 0);
+      analogWrite(ledRGB2_B, 255);  
+
+      analogWrite(ledRGB3_R, 0);
+      analogWrite(ledRGB3_G, 0);
+      analogWrite(ledRGB3_B, 255);
+
+      analogWrite(ledRGB4_R, 0);
+      analogWrite(ledRGB4_G, 0);
+      analogWrite(ledRGB4_B, 255);
       break;
   }
 }
