@@ -1,19 +1,19 @@
 // Definir os pinos dos LEDs RGB
 const int ledRGB1_R = 2;   // vermelho 
-const int ledRGB1_B = 3;   // azul
-const int ledRGB1_G = 4;   // verde
+const int ledRGB1_G = 3;   // azul
+const int ledRGB1_B = 4;   // verde
 
 const int ledRGB2_R = 5;   // vermelho 
-const int ledRGB2_B = 6;   // azul 
-const int ledRGB2_G = 7;   // verde 
+const int ledRGB2_G = 6;   // azul 
+const int ledRGB2_B = 7;   // verde 
 
 const int ledRGB3_R = 8;   // vermelho 
-const int ledRGB3_B = 9;   // azul 
-const int ledRGB3_G = 10;  // verde 
+const int ledRGB3_G = 9;   // azul 
+const int ledRGB3_B = 10;  // verde 
 
 const int ledRGB4_R = 11;  // vermelho
-const int ledRGB4_B = 12;  // azul
-const int ledRGB4_G = 13;  // verde
+const int ledRGB4_G = 12;  // azul
+const int ledRGB4_B = 13;  // verde
 
 // Definir os pinos dos botões
 const int button1Pin = A0; 
@@ -77,121 +77,121 @@ void loop() {
 }
 
 // Função para acender o LED 
-void acenderLed(int ledNumero) {
-  switch (ledNumero) {
+void acenderLed(int padraoNumero) {
+  switch (padraoNumero) {
     case 1:
-    Serial.println(ledNumero);
-      // Cor dos LEDS(Vermelho)
-      analogWrite(ledRGB1_R, 255);
-      analogWrite(ledRGB1_G, 0);
-      analogWrite(ledRGB1_B, 0);
+    Serial.println(padraoNumero);
+      // Cor dos LEDS(Amarelo)
+      digitalWrite(ledRGB1_R, HIGH);
+      digitalWrite(ledRGB1_G, HIGH);
+      digitalWrite(ledRGB1_B, LOW);
 
-      analogWrite(ledRGB2_R, 255);
-      analogWrite(ledRGB2_G, 0);
-      analogWrite(ledRGB2_B, 0);
+      digitalWrite(ledRGB2_R, HIGH);
+      digitalWrite(ledRGB2_G, HIGH);
+      digitalWrite(ledRGB2_B, LOW);
 
-      analogWrite(ledRGB3_R, 255);
-      analogWrite(ledRGB3_G, 0);
-      analogWrite(ledRGB3_B, 0);
+      digitalWrite(ledRGB3_R, HIGH);
+      digitalWrite(ledRGB3_G, HIGH);
+      digitalWrite(ledRGB3_B, LOW);
 
-      analogWrite(ledRGB4_R, 255);
-      analogWrite(ledRGB4_G, 0);
-      analogWrite(ledRGB4_B, 0);
+      digitalWrite(ledRGB4_R, HIGH);
+      digitalWrite(ledRGB4_G, HIGH);
+      digitalWrite(ledRGB4_B, LOW);
       break;
     case 2:
-    // Cor dos LEDS(Verde)
-    Serial.println(ledNumero);
-      analogWrite(ledRGB1_R, 0);
-      analogWrite(ledRGB1_G, 255);
-      analogWrite(ledRGB1_B, 0);
+    Serial.println(padraoNumero);
+      // Cor dos LEDS(Vermelho e verde)
+      digitalWrite(ledRGB1_R, LOW);
+      digitalWrite(ledRGB1_G, HIGH);
+      digitalWrite(ledRGB1_B, LOW);
 
-      analogWrite(ledRGB2_R, 0);
-      analogWrite(ledRGB2_G, 255);
-      analogWrite(ledRGB2_B, 0);
+      digitalWrite(ledRGB2_R, LOW);
+      digitalWrite(ledRGB2_G, HIGH);
+      digitalWrite(ledRGB2_B, LOW);
 
-      analogWrite(ledRGB3_R, 0);
-      analogWrite(ledRGB3_G, 255);
-      analogWrite(ledRGB3_B, 0);
+      digitalWrite(ledRGB3_R, HIGH);
+      digitalWrite(ledRGB3_G, LOW);
+      digitalWrite(ledRGB3_B, LOW);
 
-      analogWrite(ledRGB4_R, 0);
-      analogWrite(ledRGB4_G, 255);
-      analogWrite(ledRGB4_B, 0);
+      digitalWrite(ledRGB4_R, HIGH);
+      digitalWrite(ledRGB4_G, LOW);
+      digitalWrite(ledRGB4_B, LOW);
       break;
     case 3:
-	  // Cor dos LEDS(Amarelo)
-    Serial.println(ledNumero);
-      analogWrite(ledRGB1_R, 255);
-      analogWrite(ledRGB1_G, 255);
-      analogWrite(ledRGB1_B, 0);
+    Serial.println(padraoNumero);
+      // Cor dos LEDS(Magenta)
+      digitalWrite(ledRGB1_R, HIGH);
+      digitalWrite(ledRGB1_G, LOW);
+      digitalWrite(ledRGB1_B, HIGH);
 
-      analogWrite(ledRGB2_R, 255);
-      analogWrite(ledRGB2_G, 255);
-      analogWrite(ledRGB2_B, 0);
+      digitalWrite(ledRGB2_R, HIGH);
+      digitalWrite(ledRGB2_G, LOW);
+      digitalWrite(ledRGB2_B, HIGH);
 
-      analogWrite(ledRGB3_R, 255);
-      analogWrite(ledRGB3_G, 255);
-      analogWrite(ledRGB3_B, 0);
+      digitalWrite(ledRGB3_R, HIGH);
+      digitalWrite(ledRGB3_G, LOW);
+      digitalWrite(ledRGB3_B, HIGH);
 
-      analogWrite(ledRGB4_R, 255);
-      analogWrite(ledRGB4_G, 255);
-      analogWrite(ledRGB4_B, 0);
-      break;
-    /*case 4:
-	  // Cor dos LEDS(Roxo)
-    Serial.println(ledNumero);
-      analogWrite(ledRGB1_R, 148);
-      analogWrite(ledRGB1_G, 0);
-      analogWrite(ledRGB1_B, 211);
-
-      analogWrite(ledRGB2_R, 148);
-      analogWrite(ledRGB2_G, 0);
-      analogWrite(ledRGB2_B, 211);
-
-      analogWrite(ledRGB3_R, 148);
-      analogWrite(ledRGB3_G, 0);
-      analogWrite(ledRGB3_B, 211);
-
-      analogWrite(ledRGB4_R, 148);
-      analogWrite(ledRGB4_G, 0);
-      analogWrite(ledRGB4_B, 211);
-      break;*/
-    case 5:
-	  // Cor dos LEDS(Laranja)
-    Serial.println(ledNumero);
-      analogWrite(ledRGB1_R, 255);
-      analogWrite(ledRGB1_G, 165);
-      analogWrite(ledRGB1_B, 0);
-
-      analogWrite(ledRGB2_R, 255);
-      analogWrite(ledRGB2_G, 165);
-      analogWrite(ledRGB2_B, 0);
-
-      analogWrite(ledRGB3_R, 255);
-      analogWrite(ledRGB3_G, 165);
-      analogWrite(ledRGB3_B, 0);
-
-      analogWrite(ledRGB4_R, 255);
-      analogWrite(ledRGB4_G, 165);
-      analogWrite(ledRGB4_B, 0);
+      digitalWrite(ledRGB4_R, HIGH);
+      digitalWrite(ledRGB4_G, LOW);
+      digitalWrite(ledRGB4_B, HIGH);
       break;
     case 4:
-    Serial.println(ledNumero);
-    // Cor dos LEDS(Azul)
-      analogWrite(ledRGB1_R, 0);
-      analogWrite(ledRGB1_G, 0);
-      analogWrite(ledRGB1_B, 255);
+    Serial.println(padraoNumero);
+      // Cor dos LEDS(Amarelo e verde)
+      digitalWrite(ledRGB1_R, HIGH);
+      digitalWrite(ledRGB1_G, HIGH);
+      digitalWrite(ledRGB1_B, LOW);
 
-      analogWrite(ledRGB2_R, 0);
-      analogWrite(ledRGB2_G, 0);
-      analogWrite(ledRGB2_B, 255);  
+      digitalWrite(ledRGB2_R, HIGH);
+      digitalWrite(ledRGB2_G, HIGH);
+      digitalWrite(ledRGB2_B, LOW);
 
-      analogWrite(ledRGB3_R, 0);
-      analogWrite(ledRGB3_G, 0);
-      analogWrite(ledRGB3_B, 255);
+      digitalWrite(ledRGB3_R, LOW);
+      digitalWrite(ledRGB3_G, HIGH);
+      digitalWrite(ledRGB3_B, LOW);
 
-      analogWrite(ledRGB4_R, 0);
-      analogWrite(ledRGB4_G, 0);
-      analogWrite(ledRGB4_B, 255);
+      digitalWrite(ledRGB4_R, LOW);
+      digitalWrite(ledRGB4_G, HIGH);
+      digitalWrite(ledRGB4_B, LOW);
+      break;
+    case 5:
+	  // Cor dos LEDS(Vermelho)
+    Serial.println(padraoNumero);
+      digitalWrite(ledRGB1_R, HIGH);
+      digitalWrite(ledRGB1_G, LOW);
+      digitalWrite(ledRGB1_B, LOW);
+
+      digitalWrite(ledRGB2_R, HIGH);
+      digitalWrite(ledRGB2_G, LOW);
+      digitalWrite(ledRGB2_B, LOW);
+
+      digitalWrite(ledRGB3_R, HIGH);
+      digitalWrite(ledRGB3_G, LOW);
+      digitalWrite(ledRGB3_B, LOW);
+
+      digitalWrite(ledRGB4_R, HIGH);
+      digitalWrite(ledRGB4_G, LOW);
+      digitalWrite(ledRGB4_B, LOW);
+      break;
+    case 6:
+    Serial.println(padraoNumero);
+      // Cor dos LEDS(Ciano)
+      digitalWrite(ledRGB1_R, LOW);
+      digitalWrite(ledRGB1_G, HIGH);
+      digitalWrite(ledRGB1_B, HIGH);
+
+      digitalWrite(ledRGB2_R, LOW);
+      digitalWrite(ledRGB2_G, HIGH);
+      digitalWrite(ledRGB2_B, HIGH);
+
+      digitalWrite(ledRGB3_R, LOW);
+      digitalWrite(ledRGB3_G, HIGH);
+      digitalWrite(ledRGB3_B, HIGH);
+
+      digitalWrite(ledRGB4_R, LOW);
+      digitalWrite(ledRGB4_G, HIGH);
+      digitalWrite(ledRGB4_B, HIGH);
       break;
   }
 }
@@ -199,22 +199,22 @@ void acenderLed(int ledNumero) {
 // Função para apagar todos os LEDs
 void EstadoPadraoLeds() {
   // Apagar LED 1
-  analogWrite(ledRGB1_R, 0);
-  analogWrite(ledRGB1_G, 0);
-  analogWrite(ledRGB1_B, 0);
+  digitalWrite(ledRGB1_R, LOW);
+  digitalWrite(ledRGB1_G, LOW);
+  digitalWrite(ledRGB1_B, LOW);
 
   // Apagar LED 2
-  analogWrite(ledRGB2_R, 0);
-  analogWrite(ledRGB2_G, 0);
-  analogWrite(ledRGB2_B, 0);
+  digitalWrite(ledRGB2_R, LOW);
+  digitalWrite(ledRGB2_G, LOW);
+  digitalWrite(ledRGB2_B, LOW);
 
   // Apagar LED 3
-  analogWrite(ledRGB3_R, 0);
-  analogWrite(ledRGB3_G, 0);
-  analogWrite(ledRGB3_B, 0);
+  digitalWrite(ledRGB3_R, LOW);
+  digitalWrite(ledRGB3_G, LOW);
+  digitalWrite(ledRGB3_B, LOW);
 
   // Apagar LED 4
-  analogWrite(ledRGB4_R, 0);
-  analogWrite(ledRGB4_G, 0);
-  analogWrite(ledRGB4_B, 0);
+  digitalWrite(ledRGB4_R, LOW);
+  digitalWrite(ledRGB4_G, LOW);
+  digitalWrite(ledRGB4_B, LOW);
 }
