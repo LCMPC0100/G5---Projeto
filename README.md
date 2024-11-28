@@ -80,5 +80,5 @@ Garante que todos os LEDs estejam apagados quando nenhum botão for pressionado.
 
 ---
 ## 📚 Referências
-
+- [Simulador no TinkerCad](https://www.tinkercad.com/things/3HIHWPXdBLA-amarelando)
 - [Documentação Oficial Arduino](https://www.arduino.cc/en/Guide)
