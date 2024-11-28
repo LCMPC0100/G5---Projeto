@@ -54,22 +54,22 @@ void setup() {
 void loop() {
   // Verificando qual botão está sendo apertado
   if (digitalRead(button1Pin) == HIGH) {
-    acenderLed(1);  // Acender 1 padrão
+    acenderPadrao(1);  // Acender 1 padrão
     delay(500);
   } else if (digitalRead(button2Pin) == HIGH) {
-    acenderLed(2);  // Acender 2 padrão
+    acenderPadrao(2);  // Acender 2 padrão
     delay(500);
   } else if (digitalRead(button3Pin) == HIGH) {
-    acenderLed(3);  // Acender 3 padrão
+    acenderPadrao(3);  // Acender 3 padrão
     delay(500);
   } else if (digitalRead(button4Pin) == HIGH){
-    acenderLed(4);  // Acender 4 padrão
+    acenderPadrao(4);  // Acender 4 padrão
     delay(500);
   } else if (digitalRead(button5Pin) == HIGH){
-    acenderLed(5);  // Acender 5 padrão
+    acenderPadrao(5);  // Acender 5 padrão
     delay(500);
   } else if (digitalRead(button6Pin) == HIGH){
-    acenderLed(6);  // Acender 6 padrão
+    acenderPadrao(6);  // Acender 6 padrão
     delay(500);
   }else{
     EstadoPadraoLeds();
@@ -77,10 +77,10 @@ void loop() {
 }
 
 // Função para acender o LED 
-void acenderLed(int padraoNumero) {
-  switch (padraoNumero) {
+void acenderPadrao(int numPadrao) {
+  switch (numPadrao) {
     case 1:
-    Serial.println(padraoNumero);
+    Serial.println(numPadrao);
       // Cor dos LEDS(Amarelo)
       digitalWrite(ledRGB1_R, HIGH);
       digitalWrite(ledRGB1_G, HIGH);
@@ -99,7 +99,7 @@ void acenderLed(int padraoNumero) {
       digitalWrite(ledRGB4_B, LOW);
       break;
     case 2:
-    Serial.println(padraoNumero);
+    Serial.println(numPadrao);
       // Cor dos LEDS(Vermelho e verde)
       digitalWrite(ledRGB1_R, LOW);
       digitalWrite(ledRGB1_G, HIGH);
@@ -137,7 +137,7 @@ void acenderLed(int padraoNumero) {
       digitalWrite(ledRGB4_B, HIGH);
       break;
     case 4:
-    Serial.println(padraoNumero);
+    Serial.println(numPadrao);
       // Cor dos LEDS(Amarelo e verde)
       digitalWrite(ledRGB1_R, HIGH);
       digitalWrite(ledRGB1_G, HIGH);
@@ -157,7 +157,7 @@ void acenderLed(int padraoNumero) {
       break;
     case 5:
 	  // Cor dos LEDS(Vermelho)
-    Serial.println(padraoNumero);
+    Serial.println(numPadrao);
       digitalWrite(ledRGB1_R, HIGH);
       digitalWrite(ledRGB1_G, LOW);
       digitalWrite(ledRGB1_B, LOW);
@@ -175,7 +175,7 @@ void acenderLed(int padraoNumero) {
       digitalWrite(ledRGB4_B, LOW);
       break;
     case 6:
-    Serial.println(padraoNumero);
+    Serial.println(numPadrao);
       // Cor dos LEDS(Ciano)
       digitalWrite(ledRGB1_R, LOW);
       digitalWrite(ledRGB1_G, HIGH);
@@ -196,8 +196,8 @@ void acenderLed(int padraoNumero) {
   }
 }
 
-// Função para apagar todos os LEDs
 void EstadoPadraoLeds() {
+  // Estado padrão dos Leds são todos apagados
   // Apagar LED 1
   digitalWrite(ledRGB1_R, LOW);
   digitalWrite(ledRGB1_G, LOW);
