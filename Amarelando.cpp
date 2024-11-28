@@ -1,19 +1,19 @@
 // Definir os pinos dos LEDs RGB
 const int ledRGB1_R = 2;   // vermelho 
-const int ledRGB1_G = 3;   // azul
-const int ledRGB1_B = 4;   // verde
+const int ledRGB1_G = 3;   // verde
+const int ledRGB1_B = 4;   // azul
 
 const int ledRGB2_R = 5;   // vermelho 
-const int ledRGB2_G = 6;   // azul 
-const int ledRGB2_B = 7;   // verde 
+const int ledRGB2_G = 6;   // verde 
+const int ledRGB2_B = 7;   // azul
 
 const int ledRGB3_R = 8;   // vermelho 
-const int ledRGB3_G = 9;   // azul 
-const int ledRGB3_B = 10;  // verde 
+const int ledRGB3_G = 9;   // verde 
+const int ledRGB3_B = 10;  // azul 
 
 const int ledRGB4_R = 11;  // vermelho
-const int ledRGB4_G = 12;  // azul
-const int ledRGB4_B = 13;  // verde
+const int ledRGB4_G = 12;  // verde
+const int ledRGB4_B = 13;  // azul
 
 // Definir os pinos dos botões
 const int button1Pin = A0; 
